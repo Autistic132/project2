@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body{
 font-family: "Open Sans", helvetica, sans-serif;
 color: #fff;
@@ -27,7 +30,7 @@ p {
 }
 img {
     display: block;
-    width: 100%;
+    
 }
 body, html {
     height: 100%;
@@ -508,12 +511,20 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
 /* servicer pager */
 
 .top-line {
-    min-height: 390px;
+    min-height: 412px;
     background: url(./img/headline-service.png) center top no-repeat;
     display: flex;
     flex-direction: column;
     padding-bottom: 22px;
     overflow: hidden;
+}
+.logo--service {
+    margin-bottom: 3px;
+    margin-right: 68px;
+}
+.logo-img--service {
+    Width: 98px;
+    Height: 42px;
 }
 .top-line__container {
     display: flex;
@@ -525,7 +536,7 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
     font-weight: 700;
     font-size: 72px;
     line-height: 1;
-    margin-bottom: 39px;
+    margin-bottom: 40px;
 }
 .breadcrumbs__list {
     display: flex;
@@ -565,7 +576,7 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
 }
 .service {
     display: flex;
-    margin-bottom: 51px;
+    margin-bottom: 46px;
     text-decoration: none;
 }
 .service:hover {
