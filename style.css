@@ -152,7 +152,6 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
  .dropdown__menu {
     position: absolute;
     background: #CDD1D2;
-    border: 1px solid black;
     padding: 13px 18px 13px 18px;    
     top: 100%;
     display: none;
