@@ -114,6 +114,10 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
 .contacts{
     font-style:normal;
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-style: normal;
 }
 .contacts__desc {
     color: #9A9A9A;
@@ -135,6 +139,68 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
     color: #98A4A8;
     line-height: 7px;
    
+}
+.dropdown {
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-end;
+ }
+ .dropdown__link {
+    align-items: center;
+    justify-content: center;
+ }
+ .dropdown__menu {
+    position: absolute;
+    background: #CDD1D2;
+    border: 1px solid black;
+    padding: 13px 18px 13px 18px;    
+    top: 100%;
+    display: none;
+    width: 160px;
+    height: 70px;
+    opacity: 0.8;
+    border-radius: 8px;
+    margin-top: 7px;
+ }
+ .dropdown__menu:before {
+   
+    content: "";
+    display: flex;
+    height: 30px;
+    left: 0px;
+    right: 0px;
+    top: -30px;
+    position: absolute;
+ }
+ .dropdown__list:before {
+    content: "";
+    border: 16px solid transparent;
+    width: 0px;
+    height: 0px;
+    border-bottom-color: #CDD1D2;
+    top: -24px;
+    left: 90px;
+    position: absolute;
+ }
+ .dropdown:hover .dropdown__menu {
+    display: inline-flex;
+    color: #FFF;
+   
+ }
+ .dropdown:hover .contacts__dropdown-title {
+    color: #FFF;
+ }
+.dropdown__item--work {
+    color: #1E1F20;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 21px;
+}
+.dropdown__item {
+    color: #1E1F20;
+    font-size: 13px;
+    line-height: 21px;
+    margin-right: 10px;
 }
 .hero__content {
     width: 45%;
