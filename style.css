@@ -155,8 +155,8 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
     padding: 13px 18px 13px 18px;    
     top: 100%;
     display: none;
-    width: 160px;
-    height: 70px;
+    min-width: 160px;
+    min-height: 70px;
     opacity: 0.8;
     border-radius: 8px;
     margin-top: 7px;
