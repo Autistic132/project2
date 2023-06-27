@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: inherit; 
  }
+
 p {
     margin-top: 0;
 }
@@ -110,6 +111,7 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
 }
 .menu__link:hover {
     color: #DA0100;
+    transition: 0.5s;
 }
 .contacts{
     font-style:normal;
@@ -154,12 +156,14 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
     background: #CDD1D2;
     padding: 13px 18px 13px 18px;    
     top: 100%;
-    display: none;
+    left: -9999px;
+    opacity: 0;
+    transition: opacity 0.5s;
     min-width: 160px;
     min-height: 70px;
-    opacity: 0.8;
     border-radius: 8px;
     margin-top: 7px;
+    
  }
  .dropdown__menu:before {
    
@@ -182,8 +186,9 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
     position: absolute;
  }
  .dropdown:hover .dropdown__menu {
-    display: inline-flex;
+    left: -63px;
     color: #FFF;
+    opacity: 0.8;
    
  }
  .dropdown:hover .contacts__dropdown-title {
@@ -233,6 +238,7 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
 }
 .btn:hover {
     background: #DA0100;
+    transition: 0.5s;
 
 }
 .section {
@@ -452,6 +458,7 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
  .pager__link:hover {
     background: #FFFFFF;
     color: #F5170E;
+    transition: 0.5s;
  }
 .about {
     display: flex;
@@ -536,7 +543,6 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
 
 .socials {
     margin-right: 67px;
-   
     background: center center no-repeat;
 }
 .socials__item{
@@ -552,30 +558,42 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
     text-decoration: none;
     width: 36px;
     height: 36px;
+    position: relative;
 }
-.socials__item--icon--telegram .socials__link {
-    background-image: url(./img/telegram.png);
+.socials__link:after {
+    content: '';
+    display: flex;
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background: url('./img/sprites.png')
 }
-.socials__item--icon--telegram .socials__link:hover {
-    background-image: url(./img/telegram-hover.png);
+.socials__item--icon--telegram .socials__link:after {
+    background-position: -122px -10px;
 }
-.socials__item--icon--vk .socials__link {
-    background-image: url(./img/vk.png);
+.socials__item--icon--telegram .socials__link:hover:after {
+    background-position: -122px -66px;
 }
-.socials__item--icon--vk .socials__link:hover {
-    background-image: url(./img/vk-hover.png);
+.socials__item--icon--vk .socials__link:after {
+    background-position: -10px -122px;
 }
-.socials__item--icon--facebook .socials__link {
-    background-image: url(./img/facebook.png);
+.socials__item--icon--vk .socials__link:hover:after {
+    background-position: -66px -122px;
 }
-.socials__item--icon--facebook .socials__link:hover {
-    background-image: url(./img/facebook-hover.png);
+.socials__item--icon--facebook .socials__link:after {
+    background-position: -10px -10px;
 }
-.socials__item--icon--inst .socials__link {
-    background-image: url(./img/inst.png);
+.socials__item--icon--facebook .socials__link:hover:after {
+    background-position: -66px -10px;
 }
-.socials__item--icon--inst .socials__link:hover {
-    background-image: url(./img/inst-hover.png);
+.socials__item--icon--inst .socials__link:after {
+    background-position: -10px -66px;
+}
+.socials__item--icon--inst .socials__link:hover:after {
+    background-position: -66px -66px;
 }
 
 /* servicer pager */
@@ -897,6 +915,15 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
     padding: 20px 30px;
     color: #1A1B1E;
     font-size: 18px;
+    cursor: pointer;
+}
+.form__input:hover {
+    border: 1px solid #F5170E;
+}
+
+.form__input:focus {
+    border: 1px solid #F5170E;
+    outline: none;
 }
 .form__input::placeholder {
     color: #666;
