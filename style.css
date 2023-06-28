@@ -910,7 +910,7 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
     flex: 1;
     margin-right: 28px;
     border-radius: 5px;
-    border: none;
+    border: 1px solid #fff;
     background: #FFF;
     padding: 20px 30px;
     color: #1A1B1E;
@@ -918,11 +918,11 @@ background: url(./img/bg-1.png) center top no-repeat, url(./img/bg-2.png) center
     cursor: pointer;
 }
 .form__input:hover {
-    border: 1px solid #F5170E;
+    border-color: #F5170E;
 }
 
 .form__input:focus {
-    border: 1px solid #F5170E;
+    border-color: #F5170E;
     outline: none;
 }
 .form__input::placeholder {
